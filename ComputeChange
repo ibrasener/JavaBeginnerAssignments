@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+	public class ComputeChange {
+		public static void main(String[] args) {
+		    
+			Scanner input = new Scanner(System.in);
+			System.out.print("Enter an amount in double, for example 9.50: ");
+			double amount = input.nextDouble();
+		// we are learning users money with input
+			int remainingAmount = (int)(amount * 100);
+			
+			     // One dollars
+			int numberOfOneDollars = remainingAmount / 100;
+			remainingAmount = remainingAmount % 100;
+		
+			// We can find the number of quarters(25 cents) in the remaining amount
+			int numberOfQuarters = remainingAmount / 25;
+			remainingAmount = remainingAmount % 25;
+			
+			//  We can find the number of dimes(10 cents) in the remaining amount
+			int numberOfDimes = remainingAmount / 10;
+			remainingAmount = remainingAmount % 10;
+		
+			//  We can find the number of nickels(5 cents) in the remaining amount
+			int numberOfNickels = remainingAmount / 5;
+			remainingAmount = remainingAmount % 5;
+			// We can find the number of pennies(1 cent) in the remaining amount
+			int numberOfPennies = remainingAmount;
+			
+			// Remaining amount changes when we define new value such as NumberOfDimes, NumberOfPennies etc.
+			
+			System.out.println("Your amount " + amount + " consist of");
+			System.out.println( numberOfOneDollars + " dollars " );
+			System.out.println(numberOfQuarters+ " quarters ");
+			System.out.println(numberOfDimes + " dimes ");
+			System.out.println(numberOfNickels + " nickels ");
+			System.out.println(numberOfPennies +" pennies " );
+			
+		}
+}
