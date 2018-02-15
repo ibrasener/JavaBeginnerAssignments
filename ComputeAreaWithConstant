@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+	public class ComputeAreaWithConstant{
+		public static void main(String[]args) {
+			final double HOURS = 3;
+			// In AlgomaU, every course has 3 hours of lecture except some exceptions (coop1010)
+			// Thats why 3 hours is constant
+			Scanner input = new Scanner(System.in);
+			
+			System.out.print("Enter your courses at Algoma University: ");
+			double courses = input.nextDouble();
+			// when the users type their courses number, we can get info about his courses 
+			double Total_Course_Hours = (courses * HOURS);
+			// In addition, we can calculate his hours of lecture per week
+			// because we have already known his courses as we asked above users.
+			System.out.println("You have totally "+ Total_Course_Hours + " hours of lecture "
+					+ "per week at Algoma University except labs.");
+		
+	}
+
+}
