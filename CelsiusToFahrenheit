@@ -1,0 +1,14 @@
+import java.util.Scanner;
+	// on the book the program name is FahrenheitToCelcius 
+	// I just want to change program little bit 
+	// In addition, the program convert Celcius to Fahrenheit rather than Fahrenheit To Celcius 
+	public class CelsiusToFahrenheit {
+		public static void main(String[]args) {
+			Scanner input = new Scanner(System.in);
+			System.out.print("Enter a degree in Celcius: ");
+			double celcius = input.nextDouble();
+			
+			double fahrenheit = (celcius / (5.0/9)) + 32 ;
+			System.out.println("Fahrenheit = "+ fahrenheit);
+		}
+}
